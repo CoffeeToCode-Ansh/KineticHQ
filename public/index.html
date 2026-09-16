@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#b95735">
+  <meta name="description" content="KineticHQ — personalized fitness and wellness built around your objective.">
+  <title>KineticHQ — Stronger. Healthier. Happier.</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body data-theme="power">
+  <div class="noise" aria-hidden="true"></div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="KineticHQ home">
+      <img src="/assets/logo.jpeg" alt="KineticHQ logo">
+      <span>Kinetic<span>HQ</span></span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#programs">Programs</a>
+      <a href="#trainers">Trainers</a>
+      <a href="#plans">Plans</a>
+      <a href="#facilities">Facilities</a>
+      <a href="#schedule">Schedule</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="text-btn" data-auth="login">Login</button>
+      <a class="header-cta" href="#contact">Start Your Fitness Journey <span>↗</span></a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO / INTERACTIVE QUEST -->
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="dot"></span> MOVE · BALANCE · TRANSFORM</p>
+        <p class="hero-kicker">What is your objective today?</p>
+        <h1>Train with a <em>purpose.</em><br>Become your next level.</h1>
+        <p class="hero-lead">
+          Choose your path and KineticHQ reshapes the experience around how you want to move,
+          feel and perform.
+        </p>
+
+        <div class="quest-grid" id="questSelector">
+          <button class="quest active" data-goal="power">
+            <span class="quest-icon">✦</span>
+            <span><b>Build Explosive Power</b><small>HIIT · Athletic Conditioning</small></span>
+            <i>↗</i>
+          </button>
+          <button class="quest" data-goal="balance">
+            <span class="quest-icon">◌</span>
+            <span><b>Find Inner Balance</b><small>Yoga · Sound Baths · Mobility</small></span>
+            <i>↗</i>
+          </button>
+          <button class="quest" data-goal="strength">
+            <span class="quest-icon">↯</span>
+            <span><b>Gain Raw Strength</b><small>Powerlifting · Bodybuilding</small></span>
+            <i>↗</i>
+          </button>
+          <button class="quest" data-goal="endurance">
+            <span class="quest-icon">⌁</span>
+            <span><b>Endurance &amp; Stamina</b><small>Cardio · Calisthenics</small></span>
+            <i>↗</i>
+          </button>
+        </div>
+
+        <div class="hero-actions">
+          <a class="btn" href="#generator">Start Your Fitness Journey <span>→</span></a>
+          <a class="under-link" href="#programs">Explore programs ↘</a>
+        </div>
+      </div>
+
+      <div class="hero-art" id="heroArt">
+        <div class="hero-orbit orbit-one"></div>
+        <div class="hero-orbit orbit-two"></div>
+        <div class="hero-orbit orbit-three"></div>
+        <div class="hero-shard shard-one"></div>
+        <div class="hero-shard shard-two"></div>
+
+        <div class="hero-image-wrap tilt-layer">
+          <img src="/assets/hero-figure.jpg" alt="KineticHQ fitness figure illustration">
+          <div class="image-wash"></div>
+        </div>
+
+        <div class="hero-stat stat-one tilt-layer">
+          <span class="stat-icon">♥</span>
+          <div><small>HEART RATE</small><b>142 <em>bpm</em></b></div>
+        </div>
+
+        <div class="hero-stat stat-two tilt-layer">
+          <span class="stat-icon">◷</span>
+          <div><small>WORKOUT TIME</small><b>45 <em>min</em></b></div>
+        </div>
+
+        <div class="hero-stat stat-three tilt-layer">
+          <span class="stat-icon">ϟ</span>
+          <div><small>CALORIES</small><b>482 <em>kcal</em></b></div>
+        </div>
+
+        <div class="floating-note tilt-layer">
+          <span class="mini-dot"></span>
+          <div><small>YOUR QUEST</small><b id="heroQuestName">Explosive Power</b></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about" id="about">
+      <div class="section-intro reveal">
+        <p class="eyebrow">01 / ABOUT US</p>
+        <h2>Fitness that<br><em>adapts to you.</em></h2>
+        <p>
+          At KineticHQ, we combine modern training science with mindful movement to create
+          personalized fitness experiences that build strength, balance and a healthier you.
+        </p>
+        <a class="under-link" href="#generator">Learn more ↗</a>
+      </div>
+
+      <div class="photo-trio reveal">
+        <article class="photo-card tall">
+          <img src="/assets/yoga-art.jpg" alt="Yoga and mindfulness illustration">
+          <div><b>Yoga</b><small>Flexibility · Mindfulness · Flow</small></div>
+        </article>
+        <article class="photo-card">
+          <img src="/assets/meditation-art.jpg" alt="Meditation illustration">
+          <div><b>Meditation</b><small>Focus · Recovery · Calm</small></div>
+        </article>
+        <article class="photo-card offset">
+          <img src="/assets/strength-floor.jpg" alt="Strength training floor">
+          <div><b>Gym</b><small>Strength · Endurance · Performance</small></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROGRESS + CALCULATOR -->
+    <section class="section analytics" id="progress">
+      <div class="analytics-copy reveal">
+        <p class="eyebrow">02 / YOUR NUMBERS</p>
+        <h2>Your progress,<br><em>visualized.</em></h2>
+        <p>Use your numbers to understand your starting point, then train with a plan that makes sense.</p>
+        <div class="metric-row">
+          <span><b>+24%</b> Strength</span>
+          <span><b>96%</b> Consistency</span>
+        </div>
+      </div>
+
+      <div class="chart-card card reveal">
+        <div class="card-head"><b>Weekly Activity</b><span>Last 4 Weeks ▾</span></div>
+        <svg viewBox="0 0 600 270" role="img" aria-label="Rising weekly activity graph">
+          <defs>
+            <linearGradient id="chartFill" x1="0" x2="0" y1="0" y2="1">
+              <stop offset="0" stop-color="currentColor" stop-opacity=".20"/>
+              <stop offset="1" stop-color="currentColor" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <g class="chart-grid">
+            <path d="M40 40H570M40 90H570M40 140H570M40 190H570M40 240H570"/>
+          </g>
+          <path class="chart-area" d="M40 205 C95 198 115 182 155 188 S220 166 260 170 S315 140 355 151 S420 112 460 124 S515 88 570 75 L570 240 L40 240 Z"/>
+          <path class="chart-line" d="M40 205 C95 198 115 182 155 188 S220 166 260 170 S315 140 355 151 S420 112 460 124 S515 88 570 75"/>
+          <g class="chart-labels">
+            <text x="36" y="258">W1</text><text x="210" y="258">W2</text>
+            <text x="380" y="258">W3</text><text x="550" y="258">W4</text>
+          </g>
+        </svg>
+        <div class="metric-grid">
+          <span><b>+24%</b> Strength</span>
+          <span><b>-12%</b> Body Fat</span>
+          <span><b>+18%</b> Endurance</span>
+          <span><b>96%</b> Consistency</span>
+        </div>
+      </div>
+
+      <div class="calculator card reveal" id="calculator">
+        <div class="card-head">
+          <div><p class="eyebrow">FITNESS CALCULATOR</p><b>Know your numbers.</b></div>
+        </div>
+
+        <div class="calc-tabs" role="tablist">
+          <button class="calc-tab active" data-mode="bmi" type="button">BMI</button>
+          <button class="calc-tab" data-mode="bmr" type="button">BMR</button>
+          <button class="calc-tab" data-mode="calories" type="button">Calories</button>
+        </div>
+
+        <div class="calc-fields">
+          <label>Height <input id="height" type="number" min="100" max="230" value="175" inputmode="decimal"> <span>cm</span></label>
+          <label>Weight <input id="weight" type="number" min="30" max="250" value="68" inputmode="decimal"> <span>kg</span></label>
+          <label class="optional-field">Age <input id="age" type="number" min="13" max="100" value="25"></label>
+          <label class="optional-field">Sex
+            <select id="sex"><option value="female">Female</option><option value="male">Male</option></select>
+          </label>
+          <label class="activity-field">Activity
+            <select id="activity">
+              <option value="1.2">Sedentary</option>
+              <option value="1.375">Light</option>
+              <option value="1.55" selected>Moderate</option>
+              <option value="1.725">Very active</option>
+              <option value="1.9">Athlete</option>
+            </select>
+          </label>
+        </div>
+
+        <p class="calc-error" id="calcError" role="alert"></p>
+        <div class="calc-result"><small id="resultLabel">YOUR BMI</small><strong id="resultValue">22.2</strong><span id="resultNote">Healthy range</span></div>
+        <button class="btn full" id="calculateBtn" type="button">Calculate <span>→</span></button>
+      </div>
+    </section>
+
+    <!-- GENERATOR -->
+    <section class="section generator" id="generator">
+      <div class="section-intro reveal">
+        <p class="eyebrow">03 / WORKOUT BUILDER</p>
+        <h2>Build a workout<br><em>for today.</em></h2>
+        <p>Pick a target and time. KineticHQ creates a simple session you can start immediately.</p>
+      </div>
+
+      <div class="generator-panel card reveal">
+        <div class="form-row">
+          <label>Target
+            <select id="workoutTarget">
+              <option value="fullbody">Full body</option>
+              <option value="upper">Upper body</option>
+              <option value="lower">Lower body</option>
+              <option value="core">Core</option>
+            </select>
+          </label>
+          <label>Time
+            <select id="workoutTime">
+              <option value="15">15 minutes</option>
+              <option value="20">20 minutes</option>
+              <option value="30">30 minutes</option>
+            </select>
+          </label>
+        </div>
+        <button class="btn full" id="generateWorkout" type="button">Generate my workout <span>✦</span></button>
+        <div class="workout-result" id="workoutDisplay" aria-live="polite">
+          <small>KINETICHQ / READY</small>
+          <h3>Your next session starts here.</h3>
+          <p>Select your target and generate a workout card.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROGRAMS -->
+    <section class="section programs" id="programs">
+      <div class="program-heading reveal">
+        <div><p class="eyebrow">04 / OUR PROGRAMS</p><h2>Train with <em>intention.</em></h2></div>
+        <p>A clean, visual program overview inspired by the warm editorial gym references you provided.</p>
+      </div>
+
+      <div class="program-layout">
+        <div class="program-image reveal">
+          <img src="/assets/program-sign.jpg" alt="Gym program direction sign">
+          <div class="program-image-label">EVERY REP<br><em>COUNTS.</em></div>
+        </div>
+        <div class="program-list reveal">
+          <button class="program-bubble active"><span>01</span><b>Strength</b><small>Build power</small><i>↗</i></button>
+          <button class="program-bubble"><span>02</span><b>Cardio</b><small>Keep going</small><i>↗</i></button>
+          <button class="program-bubble"><span>03</span><b>Stretch</b><small>Move better</small><i>↗</i></button>
+          <button class="program-bubble"><span>04</span><b>Yoga &amp; Meditation</b><small>Find balance</small><i>↗</i></button>
+          <button class="program-bubble"><span>05</span><b>Free Weights</b><small>Build performance</small><i>↗</i></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRAINERS -->
+    <section class="section trainers" id="trainers">
+      <div class="section-head reveal">
+        <div><p class="eyebrow">05 / TRAINERS</p><h2>Coaches who<br><em>get your goal.</em></h2></div>
+        <p id="trainerIntro">Your selected objective shapes the specialists you see here.</p>
+      </div>
+      <div class="trainer-grid" id="trainerGrid"></div>
+    </section>
+
+    <!-- PLANS -->
+    <section class="section plans" id="plans">
+      <div class="section-head reveal">
+        <div><p class="eyebrow">06 / MEMBERSHIP</p><h2>Choose your<br><em>commitment.</em></h2></div>
+        <p>Flexible levels for people who want a little guidance, serious coaching or the complete KineticHQ experience.</p>
+      </div>
+      <div class="plan-grid">
+        <article class="plan-card reveal"><span>STARTER</span><h3>₹1,599<small>/mo</small></h3><p>Classes, tracking and access to the core fitness floor.</p><a class="btn ghost full" href="#contact">Start Starter →</a></article>
+        <article class="plan-card featured reveal"><span>PRO / POPULAR</span><h3>₹3,199<small>/mo</small></h3><p>Everything in Starter plus coaching and advanced progress analytics.</p><a class="btn full" href="#contact">Start Pro →</a></article>
+        <article class="plan-card reveal"><span>ELITE</span><h3>₹5,499<small>/mo</small></h3><p>Personalized programming, personal training and priority support.</p><a class="btn ghost full" href="#contact">Go Elite →</a></article>
+      </div>
+    </section>
+
+    <!-- FACILITIES -->
+    <section class="section facilities" id="facilities">
+      <div class="section-head reveal">
+        <div><p class="eyebrow">07 / THE SPACE</p><h2>Designed to make<br><em>you move.</em></h2></div>
+      </div>
+      <div class="facility-grid">
+        <article class="facility-card large reveal"><img src="/assets/strength-floor.jpg" alt="Strength floor"><div><span>01</span><b>Strength Floor</b><small>Free weights · racks · coaching zones</small></div></article>
+        <article class="facility-card reveal"><img src="/assets/performance-zone.jpg" alt="Performance zone"><div><span>02</span><b>Performance Zone</b><small>Functional training · athletic work</small></div></article>
+        <article class="facility-card reveal"><img src="/assets/yoga-meditation-studio.jpg" alt="Yoga meditation studio"><div><span>03</span><b>Yoga &amp; Meditation</b><small>Breath · mobility · recovery</small></div></article>
+        <article class="facility-card reveal"><img src="/assets/cardio-studio.jpg" alt="Cardio studio"><div><span>04</span><b>Cardio Studio</b><small>Run · ride · build your engine</small></div></article>
+      </div>
+    </section>
+
+    <!-- TRANSFORMATION -->
+    <section class="section transformation" id="stories">
+      <div class="trans-image reveal"><img src="/assets/transformation.jpg" alt="Fitness equipment ready for a session"></div>
+      <div class="trans-copy reveal">
+        <p class="eyebrow">08 / TRANSFORMATION</p>
+        <h2>“I stopped chasing motivation. I built a <em>system.</em>”</h2>
+        <p>Progress is less about perfect days and more about building a rhythm you can repeat.</p>
+        <span class="quote-by">— KineticHQ member</span>
+      </div>
+    </section>
+
+    <!-- SCHEDULE -->
+    <section class="section schedule" id="schedule">
+      <div class="section-head reveal">
+        <div><p class="eyebrow">09 / CLASS SCHEDULE</p><h2>Find your perfect<br><em>training time.</em></h2></div>
+        <p>Morning, evening and weekend sessions. The timetable below is a sample interface ready to connect to a booking system later.</p>
+      </div>
+      <div class="schedule-card card reveal">
+        <div class="days"><b>MON</b><b>TUE</b><b>WED</b><b>THU</b><b>FRI</b><b>SAT</b></div>
+        <div class="schedule-row"><span>07:00</span><b>Yoga Flow</b><small>Studio One</small><em>Balance</em></div>
+        <div class="schedule-row"><span>08:00</span><b>HIIT</b><small>Performance Zone</small><em>Power</em></div>
+        <div class="schedule-row"><span>09:00</span><b>Strength</b><small>Strength Floor</small><em>Strength</em></div>
+        <div class="schedule-row"><span>18:00</span><b>Mobility</b><small>Studio One</small><em>Balance</em></div>
+        <div class="schedule-row"><span>19:00</span><b>Power</b><small>Performance Zone</small><em>Power</em></div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq" id="faq">
+      <div class="section-intro reveal"><p class="eyebrow">10 / FAQ</p><h2>Questions,<br><em>answered.</em></h2></div>
+      <div class="faq-list reveal">
+        <details open><summary>What is the Interactive Quest?<span>+</span></summary><p>Choose Power, Balance, Strength or Endurance and the interface adapts the accent, trainer recommendations and workout context.</p></details>
+        <details><summary>Can I change my objective later?<span>+</span></summary><p>Absolutely. Your goal can change as your training changes.</p></details>
+        <details><summary>Is the fitness calculator accurate?<span>+</span></summary><p>It provides common BMI, BMR and calorie estimates for guidance, not medical diagnosis.</p></details>
+        <details><summary>Can I request personal training?<span>+</span></summary><p>Yes. Send a message through the contact form and the team can follow up.</p></details>
+      </div>
+    </section>
+
+    <!-- CONTACT / SMTP -->
+    <section class="contact" id="contact">
+      <div class="contact-bg"><img src="/assets/contact-bg.jpeg" alt=""></div>
+      <div class="contact-overlay"></div>
+      <div class="contact-inner">
+        <div class="contact-copy reveal">
+          <p class="eyebrow">11 / START TODAY</p>
+          <h2>Ready to begin<br><em>your quest?</em></h2>
+          <p>Send your objective to KineticHQ. The form now sends a real HTTP request to the Express API, which delivers the message through SMTP.</p>
+          <div class="contact-meta"><span>hello@kinetichq.example</span><span>Mon–Sun · 06:00–22:00</span></div>
+        </div>
+
+        <form class="contact-form card reveal" id="contactForm" novalidate>
+          <label>
+            Full name
+            <input id="contactName" name="name" required minlength="2" maxlength="80" autocomplete="name" placeholder="Your name">
+          </label>
+
+          <label>
+            Email
+            <input id="contactEmail" name="email" type="email" required maxlength="254" autocomplete="email" placeholder="you@example.com">
+          </label>
+
+          <label>
+            Objective
+            <select id="contactObjective" name="objective">
+              <option>Build Explosive Power</option>
+              <option>Find Inner Balance</option>
+              <option>Gain Raw Strength</option>
+              <option>Endurance &amp; Stamina</option>
+            </select>
+          </label>
+
+          <label>
+            Message
+            <textarea id="contactMessage" name="message" required minlength="10" maxlength="1500" rows="5" placeholder="Tell us what you want to achieve..."></textarea>
+          </label>
+
+          <!-- Honeypot. Real users should leave this empty. -->
+          <div class="hp" aria-hidden="true">
+            <label>Website<input id="website" name="website" tabindex="-1" autocomplete="off"></label>
+          </div>
+
+          <button class="btn full" id="contactSubmit" type="submit">Send to KineticHQ <span>↗</span></button>
+          <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <a class="brand" href="#home"><img src="/assets/logo.jpeg" alt=""><span>Kinetic<span>HQ</span></span></a>
+      <p>© 2026 KineticHQ · Stronger. Healthier. Happier.</p>
+      <a href="#home">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <!-- LOGIN / SIGNUP UI -->
+  <div class="modal" id="authModal" aria-hidden="true">
+    <div class="modal-box">
+      <button class="modal-close" id="modalClose" type="button" aria-label="Close">×</button>
+      <p class="eyebrow">WELCOME BACK</p>
+      <h2 id="authTitle">Login to KineticHQ</h2>
+      <p>This is the visual auth UI from the prototype. Real authentication can be added as a later backend task.</p>
+      <form id="authForm">
+        <label id="authNameWrap">Name<input id="authName" placeholder="Your name"></label>
+        <label>Email<input required type="email" placeholder="you@example.com"></label>
+        <label>Password<input required type="password" minlength="8" placeholder="••••••••"></label>
+        <button class="btn full" type="submit" id="authSubmit">Login →</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="/script.js"></script>
+</body>
+</html>
