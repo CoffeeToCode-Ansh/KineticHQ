@@ -1,24 +1,19 @@
 {
-  "name": "kinetichq-week3-task1",
+  "name": "kinetichq-contact-api",
   "version": "1.0.0",
-  "private": true,
-  "description": "KineticHQ Week 3 Task 1 — SMTP contact form integration with Node.js, Express, Nodemailer and Vercel.",
+  "description": "KineticHQ enquiry form backend — validates and emails submissions via SMTP.",
   "main": "server.js",
   "scripts": {
-    "dev": "node --watch server.js",
     "start": "node server.js",
-    "vercel-dev": "vercel dev"
+    "dev": "node server.js"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=18"
   },
   "dependencies": {
     "cors": "^2.8.5",
-    "dotenv": "^17.2.2",
-    "express": "^5.1.0",
-    "nodemailer": "^7.0.6"
-  },
-  "devDependencies": {
-    "vercel": "^47.0.5"
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "nodemailer": "^6.9.14"
   }
 }
