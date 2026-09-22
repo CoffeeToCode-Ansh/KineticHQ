@@ -79,6 +79,8 @@ app.get("/api/health", (req, res) => {
     ok: true,
     service: "KineticHQ contact API",
     smtpConfigured: isSmtpConfigured(),
+    allowedOriginsRaw: process.env.ALLOWED_ORIGINS || null,   // TEMP — remove after debugging
+    allowedOriginsParsed: allowedOrigins,                      // TEMP — remove after debugging
   });
 });
 
@@ -143,6 +145,7 @@ app.post("/api/contact", async (req, res, next) => {
 app.all("/api/contact", (req, res) => {
   res.set("Allow", "POST");
   res.status(405).json({ ok: false, error: "Method not allowed." });
+  
 });
 
 // 404 for anything else under /api/*
