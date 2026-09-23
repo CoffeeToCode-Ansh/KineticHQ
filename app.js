@@ -84,6 +84,7 @@ app.get("/api/health", (req, res) => {
   });
 });
 
+
 app.post("/api/contact", async (req, res, next) => {
   try {
     const { errors, data, isBot } = validateEnquiryPayload(req.body);
