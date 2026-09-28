@@ -1,7 +1,7 @@
 {
   "name": "kinetichq-contact-api",
   "version": "1.0.0",
-  "description": "KineticHQ enquiry form backend — validates and emails submissions via SMTP.",
+  "description": "KineticHQ enquiry form backend + admin dashboard API — MongoDB-backed enquiries with SMTP notification.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -14,6 +14,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
+    "mongodb": "^6.21.0",
     "nodemailer": "^6.9.14"
   }
 }

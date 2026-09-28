@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>KineticHQ — Admin Dashboard</title>
+<link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+
+  <!-- ===== Login gate ===== -->
+  <div id="loginScreen" class="login-screen">
+    <form id="loginForm" class="login-card">
+      <h1>KineticHQ Admin</h1>
+      <p class="muted">Enter the admin access token to continue.</p>
+      <input type="password" id="tokenInput" placeholder="Admin token" autocomplete="off" required />
+      <button type="submit">Enter dashboard</button>
+      <p id="loginError" class="error-text" hidden>Invalid token. Please try again.</p>
+    </form>
+  </div>
+
+  <!-- ===== Dashboard ===== -->
+  <div id="dashboard" class="dashboard" hidden>
+    <header class="dash-header">
+      <h1>Enquiries</h1>
+      <button id="logoutBtn" class="btn-ghost">Log out</button>
+    </header>
+
+    <div class="toolbar">
+      <input type="search" id="searchInput" placeholder="Search name, email, phone, message…" />
+      <select id="statusFilter">
+        <option value="">All statuses</option>
+        <option value="new">New</option>
+        <option value="in-progress">In progress</option>
+        <option value="resolved">Resolved</option>
+      </select>
+      <button id="refreshBtn" class="btn-secondary">Refresh</button>
+    </div>
+
+    <div id="listMeta" class="list-meta"></div>
+
+    <div class="table-wrap">
+      <table id="enquiriesTable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Status</th>
+            <th>Received</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="enquiriesBody">
+          <!-- rows injected by admin.js -->
+        </tbody>
+      </table>
+      <p id="emptyState" class="muted" hidden>No enquiries match your search/filter.</p>
+      <p id="loadingState" class="muted">Loading enquiries…</p>
+    </div>
+
+    <div class="pagination">
+      <button id="prevPageBtn" class="btn-secondary">Prev</button>
+      <span id="pageLabel"></span>
+      <button id="nextPageBtn" class="btn-secondary">Next</button>
+    </div>
+  </div>
+
+  <!-- ===== View/Edit modal ===== -->
+  <div id="modalOverlay" class="modal-overlay" hidden>
+    <div class="modal">
+      <button id="modalClose" class="modal-close" aria-label="Close">&times;</button>
+      <h2>Enquiry details</h2>
+      <dl class="modal-details">
+        <dt>Name</dt><dd id="modalName"></dd>
+        <dt>Email</dt><dd id="modalEmail"></dd>
+        <dt>Phone</dt><dd id="modalPhone"></dd>
+        <dt>Received</dt><dd id="modalDate"></dd>
+        <dt>Message</dt><dd id="modalMessage"></dd>
+      </dl>
+
+      <label for="modalStatusSelect" class="field-label">Status</label>
+      <select id="modalStatusSelect">
+        <option value="new">New</option>
+        <option value="in-progress">In progress</option>
+        <option value="resolved">Resolved</option>
+      </select>
+
+      <div class="modal-actions">
+        <button id="modalSaveBtn" class="btn-primary">Save status</button>
+        <button id="modalDeleteBtn" class="btn-danger">Delete enquiry</button>
+      </div>
+      <p id="modalFeedback" class="feedback-text" hidden></p>
+    </div>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>
