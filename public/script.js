@@ -311,6 +311,7 @@ async function initContactForm() {
     const payload = {
       name: $("#contactName").value.trim(),
       email: $("#contactEmail").value.trim(),
+      phone: $("#contactPhone").value.trim(),
       objective: $("#contactObjective").value,
       message: $("#contactMessage").value.trim(),
       website: $("#website").value.trim()
